@@ -1,0 +1,132 @@
+* General Styles *
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a3c0de; /* Light background */
+    color: #333; /* Dark text for contrast */
+}
+/* Navigation Styles */
+nav {
+    display: flex; /* Ensures links are aligned in a row */
+    justify-content: center; /* Centers the navigation bar */
+    background-color: #007bff; /* Blue background */
+    padding: 10px 20px; /* Adds padding to the nav area */
+    border-radius: 5px; /* Slight rounding for visual appeal */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: #120b0b; /* White text for contrast */
+    padding: 8px 15px; /* Adds padding inside each link */
+    margin: 0 10px; /* Adds space between links */
+    border-radius: 5px; /* Rounds the link edges */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #549ce3; /* Light gray text on hover */
+}
+
+nav a.active {
+    font-weight: bold; /* Highlights the active link */
+    background-color: #0056b3; /* Darker blue for active link */
+    border: 2px solid #fff; /* Adds a border for distinction */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for the content area */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Table Styles */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Rounds borders for the entire table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Table shadow */
+}
+
+.table thead {
+    background-color: #007bff; /* Blue header */
+    color: #fff; /* White text */
+    text-align: left;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+.table th {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.table td {
+    font-size: 14px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternating rows */
+}
+
+.table tr:hover {
+    background-color: #e9f7ff; /* Light blue for hover effect */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+/* Message Styles */
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #dc3545; /* Bootstrap danger red */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table {
+        font-size: 12px;
+    }
+
+    .table th, .table td {
+        padding: 8px 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
