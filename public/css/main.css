@@ -1,75 +1,132 @@
+* General Styles *
+
 body {
-    font-family: 'Roboto', sans-serif; /* Switched to a cleaner font */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Light background color for better contrast */
-    color: #343a40; /* Dark gray text for better readability */
+    background-color: #a3c0de; /* Light background */
+    color: #333; /* Dark text for contrast */
 }
-
+/* Navigation Styles */
 nav {
-    margin-bottom: 20px;
-    background-color: #007bff; /* Navy blue background for the navigation bar */
-    padding: 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    display: flex; /* Ensures links are aligned in a row */
+    justify-content: center; /* Centers the navigation bar */
+    background-color: #007bff; /* Blue background */
+    padding: 10px 20px; /* Adds padding to the nav area */
+    border-radius: 5px; /* Slight rounding for visual appeal */
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: bold;
+    text-decoration: none; /* Removes underline from links */
+    color: #120b0b; /* White text for contrast */
+    padding: 8px 15px; /* Adds padding inside each link */
+    margin: 0 10px; /* Adds space between links */
+    border-radius: 5px; /* Rounds the link edges */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
 nav a:hover {
-    background-color: #17a2b8; /* Darken link background on hover */
-    border-radius: 4px; /* Smooth border around links */
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #549ce3; /* Light gray text on hover */
 }
 
-h2 {
-    color: #17a2b8; /* Switched to a teal-like color for headers */
-    font-size: 28px;
-    margin-top: 20px;
-    text-align: center; /* Centering the header */
+nav a.active {
+    font-weight: bold; /* Highlights the active link */
+    background-color: #0056b3; /* Darker blue for active link */
+    border: 2px solid #fff; /* Adds a border for distinction */
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
+.container {
+    max-width: 1200px;
     margin: 20px auto;
-    max-width: 800px; /* Limiting paragraph width for better readability */
-    text-align: justify;
+    padding: 20px;
+    background-color: #fff; /* White background for the content area */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+/* Table Styles */
+.table-responsive {
+    overflow-x: auto;
 }
 
-button:hover {
-    background-color: #218838; /* Darken the button on hover */
-}
-
-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+.table {
     width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Rounds borders for the entire table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Table shadow */
+}
+
+.table thead {
+    background-color: #007bff; /* Blue header */
+    color: #fff; /* White text */
+    text-align: left;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+.table th {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.table td {
     font-size: 14px;
 }
 
-footer a {
-    color: #ffffff;
-    text-decoration: none;
+.table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternating rows */
 }
 
-footer a:hover {
-    text-decoration: underline;
+.table tr:hover {
+    background-color: #e9f7ff; /* Light blue for hover effect */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+/* Message Styles */
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #dc3545; /* Bootstrap danger red */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table {
+        font-size: 12px;
+    }
+
+    .table th, .table td {
+        padding: 8px 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
 }
