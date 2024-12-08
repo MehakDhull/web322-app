@@ -7,8 +7,8 @@ No part of this assignment has been copied manually or electronically from any o
 Name: Mehak 
 Student ID: 144849238
 Date: 6 December 2024
-Replit Web App URL: https://github.com/MehakDhull/web322-app.git
-GitHub Repository URL: 
+Replit Web App URL:  https://replit.com/@mehakdhull189/web322-app-2
+GitHub Repository URL: https://github.com/MehakDhull/web322-app.git
 ********************************************************************************/
 const express = require('express');
 const app = express();
