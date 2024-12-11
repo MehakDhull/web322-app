@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaidev Panchal's Store</title>
+    <title>Mehak Dhull's Store</title>
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><span>WEB322 - Jaidev Panchal</span></a>
+        <a class="navbar-brand" href="#"><span>WEB322 - Mehak</span></a>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav mr-auto">
-    {{#navLink "/shop"}}Shop{{/navLink}}
-    {{#navLink "/about"}}About{{/navLink}}
-    {{#navLink "/items"}}Items{{/navLink}}
-    {{#navLink "/categories"}}Categories{{/navLink}}
-    {{#navLink "/items/add"}}Add Item{{/navLink}}
-</ul>
+            {{#navLink "/shop"}}Shop{{/navLink}}
+            {{#navLink "/about"}}About{{/navLink}}
+            {{#navLink "/items"}}Items{{/navLink}}
+            {{#navLink "/categories"}}Categories{{/navLink}}
+            {{#navLink "/logout"}}logout{{/navLink}}
+            {{#navLink "/userHistory"}}User History {{/navLink}}
+          </ul>
 
+          {{#if session.user}}
+          <form class="navbar-form navbar-right">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="userMenu" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;{{session.user.userName}}&nbsp;&nbsp;<span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="userMenu">
+                <li><a href="/userHistory">User History</a></li>
+                <li><a href="/logout">Log Out</a></li>
+              </ul>
+            </div>
+          </form>
+          {{else}}
+          <form class="navbar-form navbar-right">
+            <a href="/register" class="btn btn-success"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Register</a>
+            <a href="/login" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Log In</a>
+          </form>
+          {{/if}}
         </div>
     </nav>
    <div class="container">
