@@ -1,14 +1,14 @@
 /*********************************************************************************
-WEB322 â€“ Assignment 05
+WEB322 â€“ Assignment 06
 I declare that this assignment is my own work in accordance with Seneca Academic Policy.
 No part of this assignment has been copied manually or electronically from any other source 
 (including 3rd party web sites) or distributed to other students.
 
 Name: Mehak Mehak 
 Student ID: 144849239
-Date: 29/10/2024
-Replit Web App URL: 
-GitHub Repository URL: 
+Date: 11 decemeber 2024
+Replit Web App URL: https://replit.com/@mehakdhull189/web322-app
+GitHub Repository URL: https://github.com/MehakDhull/web322-app.git
 ********************************************************************************/
 // Import required modules
 const express = require('express');
@@ -243,7 +243,7 @@ app.get('/categories', ensureLogin, async (req, res) => {
 });
 
 // Shop Route
-app.get('/shop', async (req, res) => {
+app.get('/shop',ensureLogin, async (req, res) => {
   let viewData = {};
   const category = req.query.category;
   const selectedItemId = req.query.id ? parseInt(req.query.id) : null;
